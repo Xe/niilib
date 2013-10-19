@@ -1,4 +1,4 @@
-niilib
+Niilib
 ======
 
-Python libraries that I use a lot
+Custom Python libraries that I use a lot
