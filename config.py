@@ -51,3 +51,11 @@ class Config():
             print "Config file not found or readable %s" % cfilepath
             sys.exit(-1)
 
+    def get(self, outerlevel, innerlevel):
+        """
+        Inputs: outer and inner level of config file to parse
+
+        Outputs: the value of that config value, or None if invalid
+        """
+        pass
+
