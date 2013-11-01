@@ -35,6 +35,6 @@ class Logger():
         if self.fout == None:
             print line
         else:
-            self.fout.write(line + "\n")
+            self.fout.write(str(time.ctime()) + " " + str(line) + "\n")
             self.fout.flush()
 
