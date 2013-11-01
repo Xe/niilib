@@ -32,7 +32,7 @@ class Logger():
             self.fout = open(logpath, "a")
 
     def log(self, line):
-        if self.fout = None:
+        if self.fout == None:
             print line
         else:
             self.fout.write(line + "\n")
