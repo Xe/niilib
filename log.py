@@ -25,8 +25,10 @@ freely, subject to the following restrictions:
 import time
 
 class Logger():
-    def __init__(self, logpath=None):
+    def __init__(self, logpath=None, lbufmax=15):
         self.fout = None
+    self._linebufnum = 0
+    self._lbufmax = lbufmax
 
         if not logpath == None:
             self.fout = open(logpath, "a")
@@ -36,5 +38,9 @@ class Logger():
             print line
         else:
             self.fout.write(str(time.ctime()) + " " + str(line) + "\n")
-            self.fout.flush()
 
+        if self._linebufnum == self._lbufmax:
+            self.fout.flush()
+            self._linebufnum = 0
+        else:
+            self._linebufnum += 1
