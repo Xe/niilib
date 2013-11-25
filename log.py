@@ -27,8 +27,8 @@ import time
 class Logger():
     def __init__(self, logpath=None, lbufmax=15):
         self.fout = None
-    self._linebufnum = 0
-    self._lbufmax = lbufmax
+        self._linebufnum = 0
+        self._lbufmax = lbufmax
 
         if not logpath == None:
             self.fout = open(logpath, "a")
